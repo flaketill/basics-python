@@ -46,9 +46,45 @@ def get_grade_student():
     return msn    
 
 
+def get_weather(temp):
+    """
+    Returns a weather based on the temperature.
+
+    Parameters:
+    temp (float): The temperature in degrees Celsius.
+
+    Returns:
+    str: A description of the weather, based on the temperature:
+        Temp >= 30: "Hot"
+        20 <= Temp < 30: "Warm"
+        10 <= Temp < 20: "Mild"
+        0 <= Temp < 10: "Cold"
+        Temp < 0: "Freezing"
+    """
+    if temp >= 30:
+        return "Hot"
+    elif 20 <= temp < 30:
+        return "Warm"
+    elif 10 <= temp < 20:
+        return "Mild"
+    elif 0 <= temp < 10:
+        return "Cold"
+    else:
+        return "Freezing"
+
+
 if __name__ == '__main__':
 
 
     print(f"{get_odd_even()}")
 
+    
     print(f"\n {get_grade_student()}")
+    
+    
+    temp = 10
+    print(f"\n The weather based on the temperature: {temp}, is {get_weather(temp)}")
+
+    
+    temp = 40
+    print(f"\n The weather based on the temperature: {temp}, is {get_weather(temp)}")
