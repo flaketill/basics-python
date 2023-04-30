@@ -5,7 +5,17 @@ def get_student_info(firstname, lastname ='Ibarra', standard ='Fifth'):
 	"""Return Fixed arguments"""
 	return f"{firstname} {lastname} 'studies in': {standard}, 'Standard'"
 
-
+def get_team_members(*members):
+	"""Return Arbitrary positional arguments"""
+	
+	team = []
+	
+	
+	for member in members:
+		team.append(member)
+		
+	return ', '.join(team)
+	
 if __name__ == '__main__':
 	
 
@@ -19,4 +29,6 @@ if __name__ == '__main__':
 	
 	# 2 keyword arguments
 	print(f"{get_student_info(lastname ='Llanas', firstname ='Valentina')}")
+	
+	print(f"\n The team members: \n \n \t {get_team_members('Armando', 'Danna', 'Keyra', 'Dante')}")
 	
