@@ -15,7 +15,18 @@ def get_team_members(*members):
 		team.append(member)
 		
 	return ', '.join(team)
+
+#	Arbitrary Keyword Arguments, **kwargs
+def get_member_info(**kwargs):
+	"""Return arbitrary keyword arguments"""
+
+	data = []
+	for key, value in kwargs.items():
+		data.append(f"{key} = {value}")
 	
+	return ', '.join(data)
+
+
 if __name__ == '__main__':
 	
 
@@ -30,5 +41,8 @@ if __name__ == '__main__':
 	# 2 keyword arguments
 	print(f"{get_student_info(lastname ='Llanas', firstname ='Valentina')}")
 	
+	#Arbitrary positional arguments
 	print(f"\n The team members: \n \n \t {get_team_members('Armando', 'Danna', 'Keyra', 'Dante')}")
-	
+
+	#Arbitrary keyword arguments (**kwargs)
+	print(f"\n The information related to member: \n \n \t {get_member_info(name='Armando', age=30, city='Chihuahua')}")
