@@ -15,6 +15,12 @@ def get_circle_area(r):
 	return math.pi * (r ** 2)
 
 
+def get_square_root(number):
+	"""Return the Square Root of a Positive Number"""
+
+	return math.sqrt(number)
+
+
 if __name__ == '__main__':
 	
 	
@@ -24,3 +30,6 @@ if __name__ == '__main__':
 	
 	radius = 4
 	print(f"The circle area with radius {radius} is: \n {get_circle_area(radius):.4}")
+	
+	number = 49
+	print(f"The Square root of {number} is: \n {get_square_root(number):.4}")
