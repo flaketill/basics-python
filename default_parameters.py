@@ -11,6 +11,14 @@ def get_triangle_area(base=2, height=10):
 	return (base * height ) / 2
 
 
+def get_price_after_discount(price, discount_in_percentage):
+    """Return final price when apply a discount, The default discount rate is 5%"""
+    if discount_in_percentage == None:
+        discount_in_percentage = 5
+    
+    return price - (price * (discount_in_percentage / 100))
+
+
 if __name__ == '__main__':
 
     # Call the function with default value
@@ -28,5 +36,13 @@ if __name__ == '__main__':
     base = 5
     height = 20
     print(f"The rectangle area with base = {base} and height = {height} is: \n {get_triangle_area(base, height):.4}")
+
+    price = 1000
+    print(f"The final Price of {price} after discount (dafault 5%):  \n {get_price_after_discount(price, None)}")
+
+
+    price = 125
+    discount = 25
+    print(f"The final Price of {price} after discount:  \n {get_price_after_discount(price, discount)}")
 
     
