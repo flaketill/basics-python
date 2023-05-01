@@ -21,6 +21,19 @@ def check_list():
 
     return result
 
+
+
+def get_environment_mode(ENVIRONMENT):
+    """ Return variable value based on whether the code 
+    is running in a development or production environment"""    
+    
+        
+    log_level = "DEBUG" if ENVIRONMENT == "development" else "INFO"
+
+
+    return log_level
+
+
 if __name__ == '__main__':
 
 
@@ -28,3 +41,7 @@ if __name__ == '__main__':
 
 
     print(f"{check_list()}")
+
+
+    ENVIRONMENT = "production"
+    print(f"\n The log level is: {get_environment_mode(ENVIRONMENT)}")
