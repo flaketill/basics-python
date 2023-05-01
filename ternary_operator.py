@@ -12,7 +12,19 @@ def get_odd_even():
     return msn
 
 
+def check_list():
+    
+    
+    list_example = [1, 2, 3]
+    
+    result = "The list is Non empty" if list_example else "he list is empty"
+
+    return result
+
 if __name__ == '__main__':
 
 
     print(f"{get_odd_even()}")
+
+
+    print(f"{check_list()}")
